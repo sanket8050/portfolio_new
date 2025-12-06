@@ -14,13 +14,23 @@ export const profile = {
     "I build scalable web applications and ML-powered tools. I enjoy turning data into products and building intuitive UI/UX with React and Tailwind.",
   projects: [
     {
+      id: "equinox",
+      title: "Equinox",
+      subtitle: "Smart Expense & Organisation Tracker",
+      description:
+        "Group expense tracker with splitting & dashboards. Built with Next.js (TypeScript), Prisma and PostgreSQL.",
+      tech: ["Next.js", "TypeScript", "Prisma", "Postgres", "Tailwind"],
+      repo: "https://github.com/sanket8050/equinox", // from resume. :contentReference[oaicite:4]{index=4}
+      live: "https://sanket8050-equinox.vercel.app",
+    },
+    {
       id: "statusly",
       title: "Statusly",
       subtitle: "Live Shop Availability & Menu Tracking (Ongoing)",
       description:
         "Full-stack MERN app for real-time shop status and menus. Responsive React frontend with Tailwind and real-time updates.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-      repo: "", // add GitHub link if you want
+      repo: "https://github.com/sanket8050/projects-react/tree/main/Statusly%5Bv2%5D", // add GitHub link if you want
       live: "", // add live link (do NOT add portfolio link from the resume)
     },
     {
@@ -30,19 +40,10 @@ export const profile = {
       description:
         "Platform for students to exchange books. Designed responsive UI and onboarding flows for 50+ pilot users.",
       tech: ["Next.js", "PostgreSQL", "Tailwind"],
-      repo: "https://github.com/sanket8050/projects-react/tree/main/razorpay-mern%20p2", // example from resume; replace if needed. :contentReference[oaicite:3]{index=3}
+      repo: "https://github.com/sanket8050/EzChange", // example from resume; replace if needed. :contentReference[oaicite:3]{index=3}
       live: "",
     },
-    {
-      id: "equinox",
-      title: "Equinox",
-      subtitle: "Smart Expense & Organisation Tracker",
-      description:
-        "Group expense tracker with splitting & dashboards. Built with Next.js (TypeScript), Prisma and PostgreSQL.",
-      tech: ["Next.js", "TypeScript", "Prisma", "Postgres", "Tailwind"],
-      repo: "https://github.com/sanket8050/equinox", // from resume. :contentReference[oaicite:4]{index=4}
-      live: "",
-    },
+    
     {
       id: "razorpay",
       title: "Razorpay Integration (E-commerce)",
@@ -61,11 +62,16 @@ export const profile = {
     "React",
     "Next.js",
     "Node.js",
+    "Express.js",
+    "git",
+    "github",
     "SQL",
     "MongoDB",
+    "Postman",
     "TensorFlow",
     "PyTorch",
     "OpenCV",
     "TailwindCSS",
+    
   ],
 };

@@ -5,43 +5,59 @@ import { Mail, MapPin, Download, ArrowRight, Briefcase } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="min-h-[85vh] flex items-center py-16">
+    <section className="min-h-[85vh] flex items-center py-16 px-4 sm:px-6">
       <div className="w-full grid md:grid-cols-2 gap-16 items-center">
         
         {/* Left Content */}
         <motion.div 
           initial={{ x: -30, opacity: 0 }} 
           animate={{ x: 0, opacity: 1 }} 
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="space-y-8"
         >
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
           >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100 shadow-sm">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300 cursor-default">
               ✨ Available for work
             </span>
           </motion.div>
           
           {/* Name with gradient */}
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <motion.h1 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-5xl md:text-6xl font-extrabold leading-tight"
+          >
+            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300">
               {profile.name}
             </span>
-          </h1>
+          </motion.h1>
           
           {/* Title */}
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="text-xl text-slate-600 leading-relaxed"
+          >
             {profile.title}
-          </p>
+          </motion.p>
           
           {/* Short Intro */}
-          <p className="text-base text-slate-500 leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="text-base text-slate-500 leading-relaxed"
+          >
             {profile.shortIntro}
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">

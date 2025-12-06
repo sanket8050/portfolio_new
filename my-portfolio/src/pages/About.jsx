@@ -6,9 +6,10 @@ export default function About() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-      className="max-w-4xl mx-auto"
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-4xl mx-auto py-12 px-4 sm:px-6"
     >
       {/* Header */}
       <div className="mb-12">
@@ -132,7 +133,7 @@ export default function About() {
         className="mt-8 grid grid-cols-3 gap-4"
       >
         <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-4 text-center border border-indigo-100">
-          <div className="text-3xl font-bold text-indigo-600">{profile.projects.length}+</div>
+          <div className="text-3xl font-bold text-indigo-600">9+</div>
           <div className="text-sm text-slate-600 mt-1">Projects</div>
         </div>
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 text-center border border-purple-100">

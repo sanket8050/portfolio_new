@@ -21,7 +21,7 @@ export default function Skills() {
       name: "Backend & Database",
       icon: Database,
       color: "blue",
-      skills: ["Node.js", "SQL", "MongoDB"],
+      skills: ["Node.js", "SQL", "MongoDB", "Postman","Express.js"],
     },
     {
       name: "Machine Learning",
@@ -69,19 +69,26 @@ export default function Skills() {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
-      className="max-w-5xl mx-auto"
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-5xl mx-auto py-12 px-4 sm:px-6"
     >
       {/* Header */}
-      <div className="mb-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-12"
+      >
         <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
           Skills & Technologies
         </h2>
         <p className="mt-4 text-lg text-slate-600">
           A comprehensive toolkit for building modern web applications and ML solutions
         </p>
-      </div>
+      </motion.div>
 
       {/* Skills by Category */}
       <div className="space-y-8">

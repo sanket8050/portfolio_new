@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Tilt from "./Tilt";
 
 export default function ProjectCard({ project, onOpen }) {
   return (
-    <motion.article
-      layout
-      whileHover={{ y: -8, transition: { duration: 0.2 } }}
-      className="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-indigo-200/50 hover:border-indigo-200 transition-all duration-300"
-    >
+    <Tilt className="rounded-2xl">
+      <motion.article
+        layout
+        whileHover={{ y: -8, transition: { duration: 0.2 } }}
+        className="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-indigo-200/50 hover:border-indigo-200 transition-all duration-300"
+      >
       {/* Card Header with gradient background */}
       <div className="h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
       
@@ -76,6 +78,7 @@ export default function ProjectCard({ project, onOpen }) {
           </button>
         </div>
       </div>
-    </motion.article>
+      </motion.article>
+    </Tilt>
   );
 }

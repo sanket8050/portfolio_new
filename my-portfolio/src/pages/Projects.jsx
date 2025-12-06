@@ -8,25 +8,45 @@ export default function Projects() {
   const [openProject, setOpenProject] = useState(null);
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="max-w-5xl mx-auto py-12 px-4 sm:px-6"
+    >
       {/* Header */}
-      <div className="mb-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-8"
+      >
         <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
           Projects
         </h2>
         <p className="mt-3 text-lg text-slate-600">
           Selected projects showcasing full-stack development and ML implementations
         </p>
-      </div>
+      </motion.div>
 
       {/* Projects Grid */}
-      <motion.div layout className="grid md:grid-cols-2 gap-6">
+      <motion.div 
+        layout 
+        className="grid md:grid-cols-2 gap-6"
+        variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {profile.projects.map((p, idx) => (
           <motion.div
             key={p.id}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: idx * 0.08, duration: 0.4 }}
           >
             <ProjectCard project={p} onOpen={(pr) => setOpenProject(pr)} />
           </motion.div>
@@ -86,7 +106,7 @@ export default function Projects() {
 
                   {/* Tech Stack */}
                   <div>
-                    <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-3">
+                    <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-3 ">
                       Technologies Used
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -111,7 +131,7 @@ export default function Projects() {
                           rel="noreferrer"
                           className="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-medium"
                         >
-                          <Github className="w-4 h-4" />
+                          <Git className="w-4 h-4" />
                           View Code
                         </a>
                       )}
@@ -134,6 +154,6 @@ export default function Projects() {
           </>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 }
