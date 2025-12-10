@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { profile } from "../data/profile";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "./ThemeToggle";
 import { Download } from "lucide-react";
 
 const links = [
@@ -82,10 +83,16 @@ export default function Navbar() {
             <Download className="w-4 h-4" />
             Resume
           </a>
+
+          {/* Theme toggle (desktop) */}
+          <div className="ml-3">
+            {/* <ThemeToggle /> */}
+          </div>
         </nav>
 
-        {/* Mobile Menu */}
-        <div className="md:hidden">
+        {/* Mobile Menu + Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          {/* <ThemeToggle /> */}
           <MobileMenu />
         </div>
       </div>

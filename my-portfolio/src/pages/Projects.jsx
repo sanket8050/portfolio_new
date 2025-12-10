@@ -113,7 +113,7 @@ export default function Projects() {
                       {openProject.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-100"
+                          className="px-4 py-2 bg-linear-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-100"
                         >
                           {t}
                         </span>
@@ -131,7 +131,7 @@ export default function Projects() {
                           rel="noreferrer"
                           className="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-medium"
                         >
-                          <Git className="w-4 h-4" />
+                          <Github className="w-4 h-4" />
                           View Code
                         </a>
                       )}

@@ -8,10 +8,10 @@ export default function ProjectCard({ project, onOpen }) {
       <motion.article
         layout
         whileHover={{ y: -8, transition: { duration: 0.2 } }}
-        className="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-indigo-200/50 hover:border-indigo-200 transition-all duration-300"
+        className="group bg-green-200 border border-black-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-indigo-200/50 hover:border-indigo-200 transition-all duration-300"
       >
       {/* Card Header with gradient background */}
-      <div className="h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+      <div className="h-2 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
       
       <div className="p-6 space-y-4">
         {/* Title Section */}
@@ -71,7 +71,7 @@ export default function ProjectCard({ project, onOpen }) {
 
           <button
             onClick={() => onOpen(project)}
-            className="ml-auto flex items-center gap-1.5 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-lg hover:bg-indigo-100 transition-colors text-sm font-semibold group/btn"
+            className="ml-auto flex items-center gap-1.5 px-4 py-2 bg-blue-400 text-indigo-700 rounded-lg hover:bg-indigo-100 transition-colors text-sm font-semibold group/btn"
           >
             View Details
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

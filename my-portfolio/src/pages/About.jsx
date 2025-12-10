@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { profile } from "../data/profile";
+import ThemeToggle from "../components/ThemeToggle";
 import { GraduationCap, Code, Briefcase, Lightbulb } from "lucide-react";
 
 export default function About() {
@@ -13,6 +14,7 @@ export default function About() {
     >
       {/* Header */}
       <div className="mb-12">
+          
         <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
           About Me
         </h2>
