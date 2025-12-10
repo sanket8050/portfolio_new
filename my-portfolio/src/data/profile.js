@@ -7,7 +7,7 @@ export const profile = {
   location: "Pune, India",
   email: "sanketadsare5@gmail.com",
   phone: "+91-8010788050",
-  resumeUrl: "/resume.pdf", // put your resume PDF into public/resume.pdf
+  resumeUrl: "/Sanket_Adsare_resume.pdf", // put your resume PDF into public/resume.pdf
   linkedin: "https://www.linkedin.com/in/sanket-adsare-573659257/", // from resume. :contentReference[oaicite:1]{index=1}
   github: "https://github.com/sanket8050", // from resume. :contentReference[oaicite:2]{index=2}
   shortIntro:
