@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-b from-white to-indigo-50 text-slate-900">
+    <div className="min-h-screen flex flex-col bg-black text-slate-100">
       <Navbar />
       <main className="grow container mx-auto px-6 md:px-8 lg:px-12 py-10">
         <Routes>

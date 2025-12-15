@@ -1,11 +1,21 @@
 import { profile } from "../data/profile";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { SiLeetcode } from "react-icons/si";
+import codolioIcon from "../assets/codolio.svg";
+import { FaGithub } from "react-icons/fa";
+
+
 import { Mail, MapPin, Download, ArrowRight, Briefcase } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="min-h-[85vh] flex items-center py-16 px-4 sm:px-6">
+    <section className="min-h-[85vh] flex items-center py-16 px-4  bg-black sm:px-6  relative rounded-3xl p-2 
+   backdrop-blur-xl
+  border border-emerald-400/30
+  shadow-[0_0_30px_rgba(16,185,129,0.35)]
+  hover:shadow-[0_0_60px_rgba(16,185,129,0.55)]
+  transition-all duration-500">
       <div className="w-full grid md:grid-cols-2 gap-16 items-center">
         
         {/* Left Content */}
@@ -80,11 +90,45 @@ export default function Home() {
             <a 
               href={profile.resumeUrl} 
               download 
-              className="px-6 py-3 bg-white border-2 border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-semibold"
+              className="px-6 py-3 bg-purple-500 border-2 border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-semibold"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-6 h-6" />
               Resume
             </a>
+
+            <a
+              href="https://leetcode.com/sanket8050/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LeetCode"
+              className="social-icon px-6 py-3 bg-[#F89F1B] border-2 border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-semibold "
+
+            >
+              <SiLeetcode size={30} />leetcode
+            </a>
+
+            <a
+              href="https://codolio.com/profile/Albert8050"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Codolio"
+              className="social-icon px-6 py-3 bg-orange-400 border-2 border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-semibold"
+            >
+              <img src={codolioIcon} alt="Codolio" className="w-15 h-10" />Codolio
+            </a>
+
+
+            <a
+              href="https://github.com/sanket8050"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="social-icon px-6 py-3 bg-green-400 border-2 border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-semibold"
+            >
+              <FaGithub size={26} />Github
+            </a>
+
+
           </div>
 
           {/* Contact Info Cards */}
