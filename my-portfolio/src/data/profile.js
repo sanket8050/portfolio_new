@@ -54,7 +54,20 @@ export const profile = {
       repo: "https://github.com/sanket8050/projects-react/tree/main/razorpay-mern%20p2", // from resume. :contentReference[oaicite:5]{index=5}
       live: "",
     },
+    {
+      id: "topmate",
+      title: "Topmate-Freelancing platform",
+      subtitle: "Engineering project showcase & inquiry platform",
+      ddescription:
+  "A content-first academic project assistance platform built with Next.js, enabling students to explore engineering projects and connect via WhatsApp for end-to-end project support.",
+
+      tech: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary", "WhatsApp API"],
+      repo: "https://github.com/sanket8050/topmate", 
+      live: "https://topmate-tau.vercel.app"
+    }
+
   ],
+  
   skills: [
     "C++",
     "Python",
