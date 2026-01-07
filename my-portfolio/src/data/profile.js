@@ -24,6 +24,24 @@ export const profile = {
       live: "https://sanket8050-equinox.vercel.app",
     },
     {
+  id: "reachout",
+  title: "ReachOut – AI-Powered Outreach SaaS",
+  subtitle: "Resume-driven recruiter outreach platform",
+  description:
+    "A production-ready SaaS that automates job outreach by extracting resume data, generating personalized emails, and sending recruiter emails with PDF resume attachments. Built for real users with secure SMTP, email tracking, and application history.",
+  tech: [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "NextAuth",
+    "SMTP (Nodemailer)",
+    "Cloudinary / Blob Storage"
+  ],
+  repo: "https://github.com/sanket8050/reachout",
+  live: "https://sanket8050-reachout.vercel.app"
+},
+    {
       id: "statusly",
       title: "Statusly",
       subtitle: "Live Shop Availability & Menu Tracking (Ongoing)",
